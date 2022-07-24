@@ -78,6 +78,82 @@ header {
   font-size: 30px;
 }
 
+.open .navbtn {
+  z-index: 110;
+  color: #fff;
+}
+
+/* .navbtn .fa-bars {
+  display: revert;
+}
+
+.open .navbtn .fa-bars {
+  display: none;
+}
+
+.navbtn .fa-times {
+  display: none;
+}
+
+.open .navbtn .fa-times {
+  display: revert;
+} */
+
+/* Hamburgers設定 */
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after,
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: currentColor;
+}
+
+@media (min-width: 768px) {
+  .navbtn {
+    display: none;
+  }
+}
+
+/* ナビゲーションメニュー：モバイル */
+@media (max-width: 767px) {
+  .nav {
+    position: fixed;
+    inset: 0 -100% 0 100%;
+    z-index: 100;
+    background-color: #4e483ae6;
+    transition: transform 0.5s;
+  }
+
+  .open .nav {
+    transform: translate(-100%, 0);
+  }
+
+  .open body {
+    position: fixed;
+    overflow: hidden;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 40px;
+    color: #fff;
+  }
+}
+
+/* ナビゲーションメニュー */
+@media (min-width: 768px) {
+  .nav ul {
+    display: flex;
+    gap: 40px;
+    color: #707070;
+  }
+}
+
 /* ヒーロー */
 .hero {
   height: 650px;
@@ -118,6 +194,10 @@ header {
   font-size: 18px;
   text-align: center;
   text-shadow: 0 0 6px #00000052;
+}
+
+.btn-accent {
+  background-color: #b72661;
 }
 
 /* 画像とテキスト */
@@ -357,4 +437,52 @@ footer {
 
 .entry-container :last-child {
   margin-bottom: 0;
+}
+
+/* プラン */
+.plans {
+  padding: var(--v-space) 0;
+  background-color: #e9e5e9;
+}
+
+.plans-container {
+  display: grid;
+  gap: 27px;
+}
+
+@media (min-width: 768px) {
+  .plans-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* プラン：カード */
+.plan {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 27px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.plan h3 {
+  margin-bottom: 38px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.plan .desc {
+  margin-bottom: 38px;
+}
+
+.plan .price {
+  margin-top: auto;
+  margin-bottom: 22px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.plan .btn {
+  width: auto;
 }

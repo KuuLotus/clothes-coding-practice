@@ -15,6 +15,7 @@
       src="https://kit.fontawesome.com/54b3c260a3.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="./dist/hamburgers.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -26,10 +27,24 @@
           </a>
         </div>
 
-        <button class="navbtn">
-          <i class="fa-solid fa-bars"></i>
+        <button
+          class="navbtn hamburger hamburger--stand"
+          onClick="document.querySelector('html').classList.toggle('open');
+                   document.querySelector('.navbtn').classList.toggle('is-active');"
+        >
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
           <span class="sr-only">MENU</span>
         </button>
+
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="content.html">サービス案内</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
@@ -222,9 +237,7 @@
           <li><a href="#">会社概要</a></li>
         </ul>
 
-        <div class="footer-copy">
-          ©︎ Clothes Production.
-        </div>
+        <div class="footer-copy">©︎ Clothes Production.</div>
       </div>
     </footer>
   </body>
